@@ -1,0 +1,6 @@
+{
+    "key": "kickstartname", 
+    "name": "kickstart Name", 
+    "showInPlan": false, 
+    "type": "c.s.s.b.phv.Text"
+}

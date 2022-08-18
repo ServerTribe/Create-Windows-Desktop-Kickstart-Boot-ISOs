@@ -1,0 +1,1 @@
+This is the parameter for the base directory on the Attune node for storing kickstart files.

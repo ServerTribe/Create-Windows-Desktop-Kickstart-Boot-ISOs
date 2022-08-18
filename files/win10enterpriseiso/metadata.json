@@ -1,0 +1,10 @@
+{
+    "fileName": "WIN10_Enterprise_ISO.zip", 
+    "formatKey": "zip", 
+    "key": "win10enterpriseiso", 
+    "md5": "86a735513ff81f3e79ba3e97ce1d7983", 
+    "name": "WIN10 Enterprise ISO", 
+    "remoteUri": null, 
+    "size": 6013673834, 
+    "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
+}

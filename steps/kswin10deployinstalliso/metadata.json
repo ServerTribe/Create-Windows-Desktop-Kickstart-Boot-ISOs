@@ -1,0 +1,11 @@
+{
+    "archiveKey": "win10enterpriseiso", 
+    "deployPath": "{ksVmwareAttuneBaseDir}/build-{kickstartServer.fqn}", 
+    "enabled": true, 
+    "key": "kswin10deployinstalliso", 
+    "name": "KS Win10 Deploy Install ISO", 
+    "osCredKey": "attunenodecredlinux", 
+    "serverKey": "attunenodelinux", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
+    "unpack": true
+}

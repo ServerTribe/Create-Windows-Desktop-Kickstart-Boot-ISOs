@@ -1,0 +1,6 @@
+{
+    "key": "kickstartserverwin", 
+    "name": "Kickstart Server: Win", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.WindowsServer"
+}
