@@ -1,275 +1,364 @@
-
 <!--*************************************************
 Windows 10 Answer File Generator
 Created using Windows AFG found at:
 ;http://www.windowsafg.com
 
 Installation Notes
-Location: 
+Location:
 Notes: Enter your comments here...
 **************************************************-->
 
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend">
-<settings pass="windowsPE">
-    
-<component name="Microsoft-Windows-PnpCustomizationsWinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<DriverPaths>
-		<PathAndCredentials wcm:keyValue="1" wcm:action="add">
-			<Path>E:\</Path>
-			<Credentials></Credentials>
-		</PathAndCredentials>
-	</DriverPaths>
-</component>
+    <settings pass="windowsPE">
 
-<component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<SetupUILanguage>
-<UILanguage>en-US</UILanguage>
-</SetupUILanguage>
-<InputLocale>1409:00000409</InputLocale>
-<SystemLocale>en-US</SystemLocale>
-<UILanguage>en-US</UILanguage>
-<UILanguageFallback>en-US</UILanguageFallback>
-<UserLocale>${kickstartLocale}</UserLocale>
-</component>
-<component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<DiskConfiguration>
-<Disk wcm:action="add">
-<CreatePartitions>
-<CreatePartition wcm:action="add">
-<Order>1</Order>
-<Type>Primary</Type>
-<Size>100</Size>
-</CreatePartition>
-<CreatePartition wcm:action="add">
-<Extend>true</Extend>
-<Order>2</Order>
-<Type>Primary</Type>
-</CreatePartition>
-</CreatePartitions>
-<ModifyPartitions>
-<ModifyPartition wcm:action="add">
-<Active>true</Active>
-<Format>NTFS</Format>
-<Label>System Reserved</Label>
-<Order>1</Order>
-<PartitionID>1</PartitionID>
-<TypeID>0x27</TypeID>
-</ModifyPartition>
-<ModifyPartition wcm:action="add">
-<Active>true</Active>
-<Format>NTFS</Format>
-<Label>OS</Label>
-<Letter>C</Letter>
-<Order>2</Order>
-<PartitionID>2</PartitionID>
-</ModifyPartition>
-</ModifyPartitions>
-<DiskID>0</DiskID>
-<WillWipeDisk>true</WillWipeDisk>
-</Disk>
-</DiskConfiguration>
-<ImageInstall>
-<OSImage>
-<InstallTo>
-<DiskID>0</DiskID>
-<PartitionID>2</PartitionID>
-</InstallTo>
-<InstallToAvailablePartition>false</InstallToAvailablePartition>
-</OSImage>
-</ImageInstall>
-<UserData>
-<AcceptEula>true</AcceptEula>
-<FullName>${kickstartName}</FullName>
-<Organization>${kickstartOrganisationName}</Organization>
-<ProductKey>
-<Key>NPPR9-FWDCX-D2C8J-H872K-2YT43</Key>
-</ProductKey>
-</UserData>
-</component>
-</settings>
-<settings pass="offlineServicing">
-<component name="Microsoft-Windows-LUA-Settings" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<EnableLUA>true</EnableLUA>
-</component>
-</settings>
-<settings pass="generalize">
-<component name="Microsoft-Windows-Security-SPP" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<SkipRearm>1</SkipRearm>
-</component>
-</settings>
-<settings pass="specialize">
-<component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<InputLocale>1409:00000409</InputLocale>
-<SystemLocale>${kickstartLocale}</SystemLocale>
-<UILanguage>${kickstartLocale}</UILanguage>
-<UILanguageFallback>${kickstartLocale}</UILanguageFallback>
-<UserLocale>${kickstartLocale}</UserLocale>
-</component>
-<component name="Microsoft-Windows-Security-SPP-UX" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<SkipAutoActivation>true</SkipAutoActivation>
-</component>
-<component name="Microsoft-Windows-SQMApi" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<CEIPEnabled>0</CEIPEnabled>
-</component>
+        <component name="Microsoft-Windows-PnpCustomizationsWinPE"
+                   processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <DriverPaths>
+                <PathAndCredentials wcm:keyValue="1" wcm:action="add">
+                    <Path>E:\</Path>
+                    <Credentials></Credentials>
+                </PathAndCredentials>
+            </DriverPaths>
+        </component>
 
-<!-- HOSTNAME and NETWORKING -->
+        <component name="Microsoft-Windows-International-Core-WinPE"
+                   processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <SetupUILanguage>
+                <UILanguage>en-US</UILanguage>
+            </SetupUILanguage>
+            <InputLocale>1409:00000409</InputLocale>
+            <SystemLocale>en-US</SystemLocale>
+            <UILanguage>en-US</UILanguage>
+            <UILanguageFallback>en-US</UILanguageFallback>
+            <UserLocale>${kickstartLocale}</UserLocale>
+        </component>
+        <component name="Microsoft-Windows-Setup" processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <DiskConfiguration>
+                <Disk wcm:action="add">
+                    <CreatePartitions>
+                        <CreatePartition wcm:action="add">
+                            <Order>1</Order>
+                            <Type>Primary</Type>
+                            <Size>100</Size>
+                        </CreatePartition>
+                        <CreatePartition wcm:action="add">
+                            <Extend>true</Extend>
+                            <Order>2</Order>
+                            <Type>Primary</Type>
+                        </CreatePartition>
+                    </CreatePartitions>
+                    <ModifyPartitions>
+                        <ModifyPartition wcm:action="add">
+                            <Active>true</Active>
+                            <Format>NTFS</Format>
+                            <Label>System Reserved</Label>
+                            <Order>1</Order>
+                            <PartitionID>1</PartitionID>
+                            <TypeID>0x27</TypeID>
+                        </ModifyPartition>
+                        <ModifyPartition wcm:action="add">
+                            <Active>true</Active>
+                            <Format>NTFS</Format>
+                            <Label>OS</Label>
+                            <Letter>C</Letter>
+                            <Order>2</Order>
+                            <PartitionID>2</PartitionID>
+                        </ModifyPartition>
+                    </ModifyPartitions>
+                    <DiskID>0</DiskID>
+                    <WillWipeDisk>true</WillWipeDisk>
+                </Disk>
+            </DiskConfiguration>
+            <ImageInstall>
+                <OSImage>
+                    <InstallTo>
+                        <DiskID>0</DiskID>
+                        <PartitionID>2</PartitionID>
+                    </InstallTo>
+                    <InstallToAvailablePartition>false
+                    </InstallToAvailablePartition>
+                </OSImage>
+            </ImageInstall>
+            <UserData>
+                <AcceptEula>true</AcceptEula>
+                <FullName>${kickstartName}</FullName>
+                <Organization>${kickstartOrganisationName}</Organization>
+                <ProductKey>
+                    <Key>NPPR9-FWDCX-D2C8J-H872K-2YT43</Key>
+                </ProductKey>
+            </UserData>
+        </component>
+    </settings>
+    <settings pass="offlineServicing">
+        <component name="Microsoft-Windows-LUA-Settings"
+                   processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <EnableLUA>true</EnableLUA>
+        </component>
+    </settings>
+    <settings pass="generalize">
+        <component name="Microsoft-Windows-Security-SPP"
+                   processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <SkipRearm>1</SkipRearm>
+        </component>
+    </settings>
+    <settings pass="specialize">
+        <component name="Microsoft-Windows-International-Core"
+                   processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <InputLocale>1409:00000409</InputLocale>
+            <SystemLocale>${kickstartLocale}</SystemLocale>
+            <UILanguage>${kickstartLocale}</UILanguage>
+            <UILanguageFallback>${kickstartLocale}</UILanguageFallback>
+            <UserLocale>${kickstartLocale}</UserLocale>
+        </component>
+        <component name="Microsoft-Windows-Security-SPP-UX"
+                   processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <SkipAutoActivation>true</SkipAutoActivation>
+        </component>
+        <component name="Microsoft-Windows-SQMApi" processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <CEIPEnabled>0</CEIPEnabled>
+        </component>
 
-<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<ComputerName>${targetServer.hostname}</ComputerName>
-<ProductKey>NPPR9-FWDCX-D2C8J-H872K-2YT43</ProductKey>
-</component>
+        <!-- HOSTNAME and NETWORKING -->
 
-</settings>
-<settings pass="oobeSystem">
+        <component name="Microsoft-Windows-Shell-Setup"
+                   processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <ComputerName>${targetServer.hostname}</ComputerName>
+            <ProductKey>NPPR9-FWDCX-D2C8J-H872K-2YT43</ProductKey>
+        </component>
 
-<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<AutoLogon>
-<Password>
-<Value>${adminUser.password}</Value>
-<PlainText>true</PlainText>
-</Password>
-<Enabled>true</Enabled>
-<Username>${adminUser.user}</Username>
-<LogonCount>1</LogonCount>
-</AutoLogon>
-<OOBE>
-<HideEULAPage>true</HideEULAPage>
-<HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
-<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
-<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
-<NetworkLocation>Home</NetworkLocation>
-<SkipUserOOBE>true</SkipUserOOBE>
-<SkipMachineOOBE>true</SkipMachineOOBE>
-<ProtectYourPC>3</ProtectYourPC>
-</OOBE>
-<UserAccounts>
-<LocalAccounts>
-<LocalAccount wcm:action="add">
-<Password>
-<Value>${adminUser.password}</Value>
-<PlainText>true</PlainText>
-</Password>
-<Description></Description>
-<DisplayName>${adminUser.user}</DisplayName>
-<Group>Administrators</Group>
-<Name>${adminUser.user}</Name>
-</LocalAccount>
-</LocalAccounts>
-</UserAccounts>
-<RegisteredOrganization>${kickstartOrganisationName}</RegisteredOrganization>
-<RegisteredOwner>${kickstartName}</RegisteredOwner>
-<DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
-<FirstLogonCommands>
+    </settings>
+    <settings pass="oobeSystem">
 
-<%
-import struct, socket
-packedIP = socket.inet_aton(subnet.netmask)
-netmask = struct.unpack("!L", packedIP)[0]
-netmask = bin(netmask).count('1')
+        <component name="Microsoft-Windows-Shell-Setup"
+                   processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35" language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <AutoLogon>
+                <Password>
+                    <Value>${adminUser.password}</Value>
+                    <PlainText>true</PlainText>
+                </Password>
+                <Enabled>true</Enabled>
+                <Username>${adminUser.user}</Username>
+                <LogonCount>1</LogonCount>
+            </AutoLogon>
+            <OOBE>
+                <HideEULAPage>true</HideEULAPage>
+                <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+                <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+                <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+                <NetworkLocation>Home</NetworkLocation>
+                <SkipUserOOBE>true</SkipUserOOBE>
+                <SkipMachineOOBE>true</SkipMachineOOBE>
+                <ProtectYourPC>3</ProtectYourPC>
+            </OOBE>
+            <UserAccounts>
+                <LocalAccounts>
+                    <LocalAccount wcm:action="add">
+                        <Password>
+                            <Value>${adminUser.password}</Value>
+                            <PlainText>true</PlainText>
+                        </Password>
+                        <Description></Description>
+                        <DisplayName>${adminUser.user}</DisplayName>
+                        <Group>Administrators</Group>
+                        <Name>${adminUser.user}</Name>
+                    </LocalAccount>
+                </LocalAccounts>
+            </UserAccounts>
+            <RegisteredOrganization>${kickstartOrganisationName}
+            </RegisteredOrganization>
+            <RegisteredOwner>${kickstartName}</RegisteredOwner>
+            <DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
+            <FirstLogonCommands>
 
-dns = ','.join([ "'%s'" % i for i in (subnet.dns1, subnet.dns2) if i])
-%>
-    
+                <%
+                import struct, socket
+                packedIP = socket.inet_aton(subnet.netmask)
+                netmask = struct.unpack("!L", packedIP)[0]
+                netmask = bin(netmask).count('1')
+
+                dns = ','.join([ "'%s'" % i for i in (subnet.dns1, subnet.dns2)
+                if i])
+                %>
+
                 <SynchronousCommand wcm:action="add">
                     <Description>Control Panel View</Description>
                     <Order>1</Order>
-                    <CommandLine>reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel" /v StartupPage /t REG_DWORD /d 1 /f</CommandLine>
+                    <CommandLine>reg add
+                        "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel"
+                        /v StartupPage /t REG_DWORD /d 1 /f
+                    </CommandLine>
                     <RequiresUserInput>true</RequiresUserInput>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>2</Order>
                     <Description>Control Panel Icon Size</Description>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel" /v AllItemsIconView /t REG_DWORD /d 1 /f</CommandLine>
+                    <CommandLine>reg add
+                        "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel"
+                        /v AllItemsIconView /t REG_DWORD /d 1 /f
+                    </CommandLine>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>3</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>cmd /C wmic useraccount where name="${kickstartName}" set PasswordExpires=false</CommandLine>
+                    <CommandLine>cmd /C wmic useraccount where
+                        name="${kickstartName}" set PasswordExpires=false
+                    </CommandLine>
                     <Description>Password Never Expires</Description>
                 </SynchronousCommand>
-                
+
                 <!-- NETWORKING -->
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>4</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>Powershell -Command "New-NetIPAddress -InterfaceAlias 'Ethernet0' -IPAddress ${targetServer.ip} -PrefixLength ${netmask} -DefaultGateway ${subnet.gateway} -Confirm:$false"</CommandLine>
+                    <CommandLine>Powershell -Command "New-NetIPAddress
+                        -InterfaceAlias 'Ethernet0' -IPAddress
+                        ${targetServer.ip} -PrefixLength ${netmask}
+                        -DefaultGateway ${subnet.gateway} -Confirm:$false"
+                    </CommandLine>
                     <Description>Set Network IP</Description>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>5</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>Powershell -Command "Set-DnsClientServerAddress -InterfaceAlias Ethernet0 -ServerAddresses @(${dns})"</CommandLine>
+                    <CommandLine>Powershell -Command "Set-DnsClientServerAddress
+                        -InterfaceAlias Ethernet0 -ServerAddresses @(${dns})"
+                    </CommandLine>
                     <Description>Set Network Profile</Description>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>6</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>Powershell -Command "Set-DnsClientGlobalSetting -SuffixSearchList @('${targetServer.domain}')"</CommandLine>
+                    <CommandLine>Powershell -Command "Set-DnsClientGlobalSetting
+                        -SuffixSearchList @('${targetServer.domain}')"
+                    </CommandLine>
                     <Description>Set Network Profile</Description>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>7</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>Powershell -Command "Set-NetConnectionProfile -InterfaceAlias 'Ethernet0' -NetworkCategory Private -Confirm:$false"</CommandLine>
+                    <CommandLine>Powershell -Command "Set-NetConnectionProfile
+                        -InterfaceAlias 'Ethernet0' -NetworkCategory Private
+                        -Confirm:$false"
+                    </CommandLine>
                     <Description>Set Network Profile</Description>
                 </SynchronousCommand>
-                
+
                 <!-- RDP -->
                 <SynchronousCommand wcm:action="add">
                     <Order>8</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>PowerShell -Command "Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name 'fDenyTSConnections' -Value 0"</CommandLine>
+                    <CommandLine>PowerShell -Command "Set-ItemProperty -Path
+                        'HKLM:\System\CurrentControlSet\Control\Terminal
+                        Server'-name 'fDenyTSConnections' -Value 0"
+                    </CommandLine>
                     <Description>Setup RDP</Description>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>9</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>PowerShell -Command "Enable-NetFirewallRule -DisplayGroup 'Remote Desktop'"</CommandLine>
+                    <CommandLine>PowerShell -Command "Enable-NetFirewallRule
+                        -DisplayGroup 'Remote Desktop'"
+                    </CommandLine>
                     <Description>Setup RDP</Description>
                 </SynchronousCommand>
-                
+
                 <!-- WinRM -->
                 <SynchronousCommand wcm:action="add">
                     <Order>10</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>PowerShell -Command "Enable-PSRemoting -SkipNetworkProfileCheck -Force"</CommandLine>
+                    <CommandLine>PowerShell -Command "Enable-PSRemoting
+                        -SkipNetworkProfileCheck -Force"
+                    </CommandLine>
                     <Description>Setup WinRM</Description>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>11</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>PowerShell -Command 'Remove-Item -Path WSMan:\Localhost\listener\listener* -Recurse;'</CommandLine>
+                    <CommandLine>PowerShell -Command 'Remove-Item -Path
+                        WSMan:\Localhost\listener\listener* -Recurse;'
+                    </CommandLine>
                     <Description>Setup WinRM</Description>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>12</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>PowerShell -Command "New-Item -Path WSMan:\LocalHost\Listener -Transport HTTPS -Address * -CertificateThumbPrint (New-SelfSignedCertificate -CertstoreLocation Cert:\LocalMachine\My -DnsName '${targetServer.hostname}' -NotAfter (get-date).AddYears(6)).Thumbprint -Force"</CommandLine>
+                    <CommandLine>PowerShell -Command "New-Item -Path
+                        WSMan:\LocalHost\Listener -Transport HTTPS -Address *
+                        -CertificateThumbPrint (New-SelfSignedCertificate
+                        -CertstoreLocation Cert:\LocalMachine\My -DnsName
+                        '${targetServer.hostname}' -NotAfter
+                        (get-date).AddYears(6)).Thumbprint -Force"
+                    </CommandLine>
                     <Description>Setup WinRM</Description>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>13</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>PowerShell -Command "Restart-Service -Force WinRM;"</CommandLine>
+                    <CommandLine>PowerShell -Command "Restart-Service -Force
+                        WinRM;"
+                    </CommandLine>
                     <Description>Setup WinRM</Description>
                 </SynchronousCommand>
-                
+
                 <SynchronousCommand wcm:action="add">
                     <Order>14</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>PowerShell -Command "New-NetFirewallRule -DisplayName 'WinRM HTTPS' -Name 'WinRM_HTTPS' -Profile Any -LocalPort 5986 -Protocol TCP"</CommandLine>
+                    <CommandLine>PowerShell -Command "New-NetFirewallRule
+                        -DisplayName 'WinRM HTTPS' -Name 'WinRM_HTTPS' -Profile
+                        Any -LocalPort 5986 -Protocol TCP"
+                    </CommandLine>
                     <Description>Setup WinRM</Description>
                 </SynchronousCommand>
 
@@ -277,7 +366,11 @@ dns = ','.join([ "'%s'" % i for i in (subnet.dns1, subnet.dns2) if i])
                 <SynchronousCommand wcm:action="add">
                     <Order>15</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>PowerShell -Command "Get-NetFirewallRule -DisplayGroup 'File and Printer Sharing' | Set-NetFirewallRule -Profile 'Private, Domain' -Enabled true"</CommandLine>
+                    <CommandLine>PowerShell -Command "Get-NetFirewallRule
+                        -DisplayGroup 'File and Printer Sharing' |
+                        Set-NetFirewallRule -Profile 'Private, Domain' -Enabled
+                        true"
+                    </CommandLine>
                     <Description>Enable File Sharing</Description>
                 </SynchronousCommand>
 
@@ -285,10 +378,13 @@ dns = ','.join([ "'%s'" % i for i in (subnet.dns1, subnet.dns2) if i])
                 <SynchronousCommand wcm:action="add">
                     <Order>16</Order>
                     <RequiresUserInput>false</RequiresUserInput>
-                    <CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoLogonCount /t REG_DWORD /d 0 /f</CommandLine>
+                    <CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows
+                        NT\CurrentVersion\Winlogon" /v AutoLogonCount /t
+                        REG_DWORD /d 0 /f
+                    </CommandLine>
                     <Description>Disable auto login</Description>
                 </SynchronousCommand>
-                
+
                 <!-- Log Off -->
                 <SynchronousCommand wcm:action="add">
                     <Order>17</Order>
@@ -297,8 +393,8 @@ dns = ','.join([ "'%s'" % i for i in (subnet.dns1, subnet.dns2) if i])
                     <Description>Log Off</Description>
                 </SynchronousCommand>
 
-</FirstLogonCommands>
-<TimeZone>${timeZone}</TimeZone>
-</component>
-</settings>
+            </FirstLogonCommands>
+            <TimeZone>${timeZone}</TimeZone>
+        </component>
+    </settings>
 </unattend>
