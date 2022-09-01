@@ -33,13 +33,13 @@ Notes: Enter your comments here...
                    xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <SetupUILanguage>
-                <UILanguage>en-US</UILanguage>
+                <UILanguage>${locale}</UILanguage>
             </SetupUILanguage>
-            <InputLocale>1409:00000409</InputLocale>
-            <SystemLocale>en-US</SystemLocale>
-            <UILanguage>en-US</UILanguage>
-            <UILanguageFallback>en-US</UILanguageFallback>
-            <UserLocale>${userLocale}</UserLocale>
+            <InputLocale>${inputLocale}</InputLocale>
+            <SystemLocale>${locale}</SystemLocale>
+            <UILanguage>${locale}</UILanguage>
+            <UILanguageFallback>${locale}</UILanguageFallback>
+            <UserLocale>${locale}</UserLocale>
         </component>
         <component name="Microsoft-Windows-Setup" processorArchitecture="amd64"
                    publicKeyToken="31bf3856ad364e35" language="neutral"
@@ -129,11 +129,11 @@ Notes: Enter your comments here...
                    versionScope="nonSxS"
                    xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <InputLocale>1409:00000409</InputLocale>
-            <SystemLocale>${userLocale}</SystemLocale>
-            <UILanguage>${userLocale}</UILanguage>
-            <UILanguageFallback>${userLocale}</UILanguageFallback>
-            <UserLocale>${userLocale}</UserLocale>
+            <InputLocale>${inputLocale}</InputLocale>
+            <SystemLocale>${locale}</SystemLocale>
+            <UILanguage>${locale}</UILanguage>
+            <UILanguageFallback>${locale}</UILanguageFallback>
+            <UserLocale>${locale}</UserLocale>
         </component>
         <component name="Microsoft-Windows-Security-SPP-UX"
                    processorArchitecture="amd64"

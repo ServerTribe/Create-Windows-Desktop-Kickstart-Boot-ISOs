@@ -1,6 +1,0 @@
-{
-    "key": "windowsisotimezone", 
-    "name": "Windows ISO Timezone", 
-    "showInPlan": true, 
-    "type": "c.s.s.b.phv.Text"
-}

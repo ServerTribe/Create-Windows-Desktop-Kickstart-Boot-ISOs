@@ -34,12 +34,17 @@
         }, 
         {
             "name": "timeZone", 
-            "parameterKey": "windowsisotimezone", 
+            "parameterKey": "timezone", 
             "parameterType": "c.s.s.b.phv.Text"
         }, 
         {
-            "name": "userLocale", 
-            "parameterKey": "windowsisolanguage", 
+            "name": "locale", 
+            "parameterKey": "locale", 
+            "parameterType": "c.s.s.b.phv.Text"
+        }, 
+        {
+            "name": "inputLocale", 
+            "parameterKey": "inputlocale", 
             "parameterType": "c.s.s.b.phv.Text"
         }
     ], 
