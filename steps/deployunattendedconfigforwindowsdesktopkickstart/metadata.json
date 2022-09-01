@@ -1,5 +1,5 @@
 {
-    "archiveKey": "winwin10unattendedconfigprl", 
+    "archiveKey": "win10unattendedconfig", 
     "deployPath": "{buildBaseDir}/build-{isoNode.fqn}/", 
     "enabled": true, 
     "key": "deployunattendedconfigforwindowsdesktopkickstart", 

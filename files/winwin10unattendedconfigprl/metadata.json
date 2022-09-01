@@ -1,5 +1,0 @@
-{
-    "key": "winwin10unattendedconfigprl", 
-    "name": "WIN Win10 Unattended Config PRL", 
-    "type": "com.servertribe.attune.tuples.FileArchiveVersionedTuple"
-}
