@@ -19,12 +19,12 @@
             "parameterType": "c.s.s.b.phv.WinOsCred"
         }, 
         {
-            "name": "kickstartName", 
+            "name": "fullName", 
             "parameterKey": "ownername", 
             "parameterType": "c.s.s.b.phv.Text"
         }, 
         {
-            "name": "kickstartOrganisationName", 
+            "name": "organisationName", 
             "parameterKey": "organisationname", 
             "parameterType": "c.s.s.b.phv.Text"
         }, 
@@ -39,7 +39,7 @@
             "parameterType": "c.s.s.b.phv.Text"
         }, 
         {
-            "name": "kickstartLocale", 
+            "name": "userLocale", 
             "parameterKey": "windowsisolanguage", 
             "parameterType": "c.s.s.b.phv.Text"
         }

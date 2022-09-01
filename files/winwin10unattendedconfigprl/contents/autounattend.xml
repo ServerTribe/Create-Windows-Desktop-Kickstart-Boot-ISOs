@@ -39,7 +39,7 @@ Notes: Enter your comments here...
             <SystemLocale>en-US</SystemLocale>
             <UILanguage>en-US</UILanguage>
             <UILanguageFallback>en-US</UILanguageFallback>
-            <UserLocale>${kickstartLocale}</UserLocale>
+            <UserLocale>${userLocale}</UserLocale>
         </component>
         <component name="Microsoft-Windows-Setup" processorArchitecture="amd64"
                    publicKeyToken="31bf3856ad364e35" language="neutral"
@@ -94,8 +94,8 @@ Notes: Enter your comments here...
             </ImageInstall>
             <UserData>
                 <AcceptEula>true</AcceptEula>
-                <FullName>${kickstartName}</FullName>
-                <Organization>${kickstartOrganisationName}</Organization>
+                <FullName>${fullName}</FullName>
+                <Organization>${organisationName}</Organization>
                 <ProductKey>
                     <Key>NPPR9-FWDCX-D2C8J-H872K-2YT43</Key>
                 </ProductKey>
@@ -130,10 +130,10 @@ Notes: Enter your comments here...
                    xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <InputLocale>1409:00000409</InputLocale>
-            <SystemLocale>${kickstartLocale}</SystemLocale>
-            <UILanguage>${kickstartLocale}</UILanguage>
-            <UILanguageFallback>${kickstartLocale}</UILanguageFallback>
-            <UserLocale>${kickstartLocale}</UserLocale>
+            <SystemLocale>${userLocale}</SystemLocale>
+            <UILanguage>${userLocale}</UILanguage>
+            <UILanguageFallback>${userLocale}</UILanguageFallback>
+            <UserLocale>${userLocale}</UserLocale>
         </component>
         <component name="Microsoft-Windows-Security-SPP-UX"
                    processorArchitecture="amd64"
@@ -205,9 +205,9 @@ Notes: Enter your comments here...
                     </LocalAccount>
                 </LocalAccounts>
             </UserAccounts>
-            <RegisteredOrganization>${kickstartOrganisationName}
+            <RegisteredOrganization>${organisationName}
             </RegisteredOrganization>
-            <RegisteredOwner>${kickstartName}</RegisteredOwner>
+            <RegisteredOwner>${fullName}</RegisteredOwner>
             <DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
             <FirstLogonCommands>
 
@@ -245,7 +245,7 @@ Notes: Enter your comments here...
                     <Order>3</Order>
                     <RequiresUserInput>false</RequiresUserInput>
                     <CommandLine>cmd /C wmic useraccount where
-                        name="${kickstartName}" set PasswordExpires=false
+                        name="${fullName}" set PasswordExpires=false
                     </CommandLine>
                     <Description>Password Never Expires</Description>
                 </SynchronousCommand>
