@@ -1,0 +1,6 @@
+{
+    "key": "windowsisolanguage", 
+    "name": "Windows ISO Language", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

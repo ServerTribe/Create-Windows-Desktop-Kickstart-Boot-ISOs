@@ -1,6 +1,0 @@
-{
-    "key": "kickstartserver", 
-    "name": "Kickstart Server", 
-    "showInPlan": true, 
-    "type": "c.s.s.b.phv.Server"
-}

@@ -1,5 +1,0 @@
-cd {ksVmwareAttuneBaseDir}/build-{targetServer.fqn}
-
-mkisofs -o {targetServer.fqn}-Drivers.iso \
-    -iso-level 2 -udf -joliet-long -relaxed-filenames -allow-limited-size \
-    -J -l -D -N -V "DRIVERS" Drivers

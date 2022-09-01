@@ -1,0 +1,6 @@
+{
+    "key": "ownername", 
+    "name": "Owner Name", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

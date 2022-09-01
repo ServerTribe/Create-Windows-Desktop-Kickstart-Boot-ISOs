@@ -3,8 +3,8 @@
     "formatKey": "zip", 
     "key": "win10enterpriseiso", 
     "md5": "86a735513ff81f3e79ba3e97ce1d7983", 
-    "name": "WIN10 Enterprise ISO", 
-    "remoteUri": null, 
+    "name": "Win10 Enterprise ISO", 
+    "remoteUri": "https://www.microsoft.com/en-au/software-download/windows10ISO", 
     "size": 6013673834, 
     "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
 }

@@ -1,0 +1,1 @@
+Kickstart server Windows administrator credentials.

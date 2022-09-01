@@ -3,8 +3,8 @@
     "interpreter": 1, 
     "key": "cleankickstartbuildfiles", 
     "name": "Clean Kickstart Build Files", 
-    "osCredKey": "attunenodecredlinux", 
-    "serverKey": "attunenodelinux", 
+    "osCredKey": "buildnodeuser", 
+    "serverKey": "buildnode", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"
 }

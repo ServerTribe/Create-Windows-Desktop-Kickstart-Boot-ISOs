@@ -1,0 +1,11 @@
+{
+    "archiveKey": "win10enterpriseiso", 
+    "deployPath": "{buildBaseDir}/build-{isoNode.fqn}", 
+    "enabled": true, 
+    "key": "deploywin10installisoforkickstart", 
+    "name": "Deploy Win10 Install ISO for Kickstart", 
+    "osCredKey": "buildnodeuser", 
+    "serverKey": "buildnode", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
+    "unpack": true
+}

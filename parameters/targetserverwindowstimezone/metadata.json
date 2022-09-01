@@ -1,6 +1,0 @@
-{
-    "key": "targetserverwindowstimezone", 
-    "name": "Target Server: Windows TimeZone", 
-    "showInPlan": true, 
-    "type": "c.s.s.b.phv.Text"
-}

@@ -1,1 +1,0 @@
-This parameter is for the details of the node running the Attune instance on a Linux or Mac OS.

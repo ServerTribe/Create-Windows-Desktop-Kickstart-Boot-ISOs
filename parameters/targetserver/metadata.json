@@ -1,6 +1,0 @@
-{
-    "key": "targetserver", 
-    "name": "Target Server", 
-    "showInPlan": true, 
-    "type": "c.s.s.b.phv.Server"
-}

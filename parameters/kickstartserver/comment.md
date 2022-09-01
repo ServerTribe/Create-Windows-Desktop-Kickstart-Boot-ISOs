@@ -1,1 +1,0 @@
-Node details of the kickstart server.

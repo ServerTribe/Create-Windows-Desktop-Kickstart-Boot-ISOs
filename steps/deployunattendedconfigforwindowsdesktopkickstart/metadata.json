@@ -1,0 +1,51 @@
+{
+    "archiveKey": "winwin10unattendedconfigprl", 
+    "deployPath": "{buildBaseDir}/build-{isoNode.fqn}/", 
+    "enabled": true, 
+    "key": "deployunattendedconfigforwindowsdesktopkickstart", 
+    "makoFileNames": [
+        "Autounattend.xml", 
+        "autounattend.xml"
+    ], 
+    "makoParameters": [
+        {
+            "name": "targetServer", 
+            "parameterKey": "isonode", 
+            "parameterType": "c.s.s.b.phv.WindowsServer"
+        }, 
+        {
+            "name": "adminUser", 
+            "parameterKey": "windowsuseradministrator", 
+            "parameterType": "c.s.s.b.phv.WinOsCred"
+        }, 
+        {
+            "name": "kickstartName", 
+            "parameterKey": "ownername", 
+            "parameterType": "c.s.s.b.phv.Text"
+        }, 
+        {
+            "name": "kickstartOrganisationName", 
+            "parameterKey": "organisationname", 
+            "parameterType": "c.s.s.b.phv.Text"
+        }, 
+        {
+            "name": "subnet", 
+            "parameterKey": "isoconfiguredsubnet", 
+            "parameterType": "c.s.s.b.phv.Ip4Subnet"
+        }, 
+        {
+            "name": "timeZone", 
+            "parameterKey": "windowsisotimezone", 
+            "parameterType": "c.s.s.b.phv.Text"
+        }, 
+        {
+            "name": "kickstartLocale", 
+            "parameterKey": "windowsisolanguage", 
+            "parameterType": "c.s.s.b.phv.Text"
+        }
+    ], 
+    "name": "Deploy Unattended Config for Windows Desktop Kickstart", 
+    "osCredKey": "buildnodeuser", 
+    "serverKey": "buildnode", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
+}

@@ -1,0 +1,6 @@
+{
+    "key": "buildnodeuser", 
+    "name": "Build Node User", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.LinOsCred"
+}
